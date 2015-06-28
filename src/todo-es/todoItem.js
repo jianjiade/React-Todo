@@ -21,4 +21,4 @@ app.TodoItem = React.createClass({
     this.props.onEdit();
     this.setState({editText: this.props.todo.title});
   }
-})
+});
