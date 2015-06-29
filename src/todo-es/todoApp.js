@@ -4,6 +4,10 @@
 'use strict';
 
 require('./todoItem.js');
+require('./footer.js');
+// require('./todoModel.js');
+// import  './todoModel.js';
+
 var app = app || {};
 
 app.ALL_TODOS = 'all';
@@ -154,7 +158,7 @@ var TodoApp = React.createClass({
   }
 });
 
-var model = new app.TodoModel('react-todos');
+var model = new TodoModel('react-todos');
 function render () {
   React.render(
     <TodoApp model={model} />,
