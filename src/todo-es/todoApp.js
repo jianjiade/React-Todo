@@ -6,8 +6,10 @@
 require('./todoItem.js');
 require('./footer.js');
 // require('./todoModel.js');
-// import  './todoModel.js';
+import todoModel from './todoModelES6.js';
 
+var TodoModels = new todoModel();
+var TodoModel = TodoModels.TodoModel;
 var app = app || {};
 
 app.ALL_TODOS = 'all';
@@ -165,5 +167,5 @@ function render () {
     document.getElementById('todoapp')
   );
 }
-model.subscribe(render);
+// model.subscribe(render);
 render();

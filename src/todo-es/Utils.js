@@ -36,8 +36,8 @@ export default class Utils {
       return localStorage.setItem(namespace, JSON.stringify(data));
     }
 
-    var srore = localStorage.getItem(namespace);
-    retrun (store && JSON.parse(store)) || [];
+    var store = localStorage.getItem(namespace);
+    return (store && JSON.parse(store)) || [];
   }
 
   //
