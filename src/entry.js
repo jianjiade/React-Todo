@@ -6,7 +6,5 @@
 // console.log("uuid:"+test);
 
 'use strict';
-var app = app || {};
-var TodoModel;
-import './todo-es/todoModel.js';
+
 import './todo-es/todoApp.js';
