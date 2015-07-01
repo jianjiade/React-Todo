@@ -57,27 +57,27 @@ var TodoApp = React.createClass({
 
   toggleAll: function (event) {
     var checked = event.target.checked;
-    this.props.model.toggleAll(checked);
+    TodoModels.toggleAll(checked);
   },
 
   toggle: function (todoToToggle) {
-    this.props.model.toggle(todoToToggle)
+    TodoModels.toggle(todoToToggle)
   },
   destroy: function(todo) {
-    this.props.model.destroy(todo);
+    TodoModels.destroy(todo);
   },
   edit: function (todo) {
     this.setState({editing: todo.id});
   },
   save: function (totoToSave, text) {
-    this.props.model.save(todoToSavem, text);
+    TodoModels.save(todoToSavem, text);
     this.setState({editing: null});
   },
   cancel: function () {
     this.setState({editing:null});
   },
   clearCompleted: function () {
-    this.props.model.clearCompleted();
+    TodoModels.clearCompleted();
   },
   render: function (){
     var footer;
