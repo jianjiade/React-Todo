@@ -3,9 +3,13 @@
 
 'use strict';
 
-require('./todoItem.js');
-require('./footer.js');
+// require('./todoItem.js');
+
+
+// require('./footer.js');
 // require('./todoModel.js');
+import TodoFooter from './footerES6.js';
+import TodoItem from './todoItemES6.js';
 import todoModel from './todoModelES6.js';
 
 var TodoModels = new todoModel();
@@ -16,8 +20,7 @@ app.ALL_TODOS = 'all';
 app.ACTIVE_TODOS = 'active';
 app.COMPLETED_TODOS = 'completed';
 
-var TodoFooter = app.TodoFooter;
-var TodoItem = app.TodoItem;
+
 
 var ENTRY_KEY = 13;
 
@@ -47,7 +50,7 @@ var TodoApp = React.createClass({
     event.preventDefault();
     var val = React.findDOMNode(this.refs.newField).value.trim();
     if (val) {
-      this.props.model.addTodo(val);
+      TodoModels.addTodo(val);
       React.findDOMNode(this.refs.newField).value = '';
     }
   },
@@ -167,5 +170,5 @@ function render () {
     document.getElementById('todoapp')
   );
 }
-// model.subscribe(render);
+TodoModels.subscribe(render);
 render();
