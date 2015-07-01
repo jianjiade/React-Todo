@@ -7,9 +7,8 @@ var Utils = new utils();
 
 var app = app || {};
 
-TodoFooter = React.createClass({
-
-  render: function () {
+class TodoFooter extends React.Component{
+  render() {
     var activeTodoWord = Utils.pluralize(this.props.count, 'item');
     var clearButton = null;
 
@@ -57,4 +56,7 @@ TodoFooter = React.createClass({
       </footer>
     );
   }
-});
+};
+
+
+export default TodoFooter;

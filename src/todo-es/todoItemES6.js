@@ -33,9 +33,7 @@ class TodoItem extends React.Component{
   }
   shouldComponentUpdate (nextProps, nextState) {
     return(
-      nextProps.todo !== this.props.todo ||
-      nextProps.editing !== this.props.editing ||
-      nextState.editText !== this.state.editText
+      nextProps.todo !== this.props.todo
     );
   }
   componentDidUpdate (prevProps) {
@@ -66,7 +64,7 @@ class TodoItem extends React.Component{
         <input
           ref="editField"
           className="edit"
-          value={this.state.editText}
+          // value={this.state.editText}
           onBlur={this.handleSubmit}
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown}
