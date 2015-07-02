@@ -31,11 +31,11 @@ class TodoItem extends React.Component{
   getInitialState () {
     return {editText: this.props.todo.title};
   }
-  shouldComponentUpdate (nextProps, nextState) {
-    return(
-      nextProps.todo !== this.props.todo
-    );
-  }
+  // shouldComponentUpdate (nextProps, nextState) {
+  //   return(
+  //     nextProps.todo !== this.props.todo
+  //   );
+  // }
   componentDidUpdate (prevProps) {
     if (!prevProps.editing && this.props.editing) {
       var node = React.findDOMNode(this.refs.editField);
