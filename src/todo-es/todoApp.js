@@ -82,7 +82,7 @@ var TodoApp = React.createClass({
   render: function (){
     var footer;
     var main;
-    var todos = this.props.model.todos;
+    var todos = this.props.model.todos || this.props.model;
 
     var shownTodos = todos.filter(function (todo) {
       switch (this.state.nowShowing) {
@@ -164,9 +164,10 @@ var TodoApp = React.createClass({
 });
 
 var model = new TodoModel('react-todos');
-function render () {
+function render (obj) {
+  var obj = obj || model;
   React.render(
-    <TodoApp model={model} />,
+    <TodoApp model={obj} />,
     document.getElementById('todoapp')
   );
 }

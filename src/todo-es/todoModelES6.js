@@ -28,7 +28,9 @@ class todoModel {
 
   inform() {
     Utils.store(app.key, app.todos);
-    app.onChanges.forEach(function(cb) {cb(); });
+    app.onChanges.forEach(function(cb) {
+      cb(app.todos); 
+    });
   };
 
   addTodo(title) {
