@@ -1,5 +1,5 @@
 //config.js webpack配置文件
-
+//config
 'use strict';
 
 var path = require('path');
@@ -15,8 +15,10 @@ module.exports = {
     'react': 'React'
   },
   module: {
-    loaders: [
-      {test: /\.js$/, loader: 'jsx!babel',include: /src/}
-    ]
+    loaders: [{
+      test: /\.js$/,
+      loader: 'jsx!babel',
+      include: /src/
+    }]
   }
 }
